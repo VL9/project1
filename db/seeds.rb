@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+Restaurant.destroy_all
+Restaurant.create(:name => 'Tetsuya', :image => 'https://www.fillmurray.com/200/300')
