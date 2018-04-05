@@ -2,7 +2,7 @@
 
 Check out the database and add to it! [live version](https://enigmatic-sea-63242.herokuapp.com/).
 
-![enigmatic-sea-63242 Screenshot](https://github.com/VL9/project1/tree/master/app/assets/images/screenshot.png)
+![enigmatic-sea-63242 Screenshot](https://github.com/VL9/project1/blob/master/app/assets/images/screenshot.png)
 <br/>
 
 ## Features
