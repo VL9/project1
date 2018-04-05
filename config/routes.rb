@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'suburbs/new'
+
+  get 'cuisines/new'
+
   root :to => 'pages#home'
 
   resources :users, :only => [:new, :create]

@@ -1,0 +1,18 @@
+<h1><%= @cuisine.name %></h1>
+
+<div class="gallery">
+<%= image_tag(@cuisine.image, :alt => @cuisine.name, :class => 'img-fluid show-cuisine img-thumbnail') %>
+</div>
+<% unless @cuisine.restaurants.empty? %>
+  <h2>Restaurants</h2>
+  <div class="gallery">
+  <% @cuisine.restaurants.each do |restaurant| %>
+    <%= link_to image_tag(restaurant.image, :alt => restaurant.name, :class => 'img-thumbnail restaurant-thumbnail'), restaurant, :name => restaurant.name %>
+  <% end %>
+  </div>
+<% end %>
+
+<div class="controls">
+  <%= link_to 'Edit', edit_cuisine_path(@cuisine) %>
+  <%= link_to 'Delete', @cuisine, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

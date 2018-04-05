@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Get Fat</title>
     <%= csrf_meta_tags %>
-
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://www.freefavicon.com/freefavicons/food/summer-hot-dog-152-70699.png">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav>
-      <%= link_to 'Home', root_path %>
+    <nav class="navbar">
       <% if @current_user.present? %>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Restaurants', restaurants_path %>
+        <%= link_to 'New Restaurants', new_restaurant_path %>
+        <%= link_to 'Cuisines', cuisines_path %>
+        <%= link_to 'New Cuisines', new_cuisine_path %>
+        <%= link_to 'Location', suburbs_path %>
+        <%= link_to 'New Locations', new_suburb_path %>
         <%= link_to "Sign Out #{ @current_user.email}", login_path, :method => 'delete' %>
         <% else %>
-      <%= link_to 'Sign Up', new_user_path %>
-      <%= link_to 'Sign In', login_path  %>
-      <%= link_to 'All Restaurants', restaurants_path %>
-      <%= link_to 'New Restaurants', new_restaurant_path %>
-      <%= link_to 'All Cuisines', cuisines_path %>
-      <%= link_to 'New Cuisines', new_cuisine_path %>
-      <%= link_to 'All Suburbs', suburbs_path %>
-      <%= link_to 'New Suburbs', new_suburb_path %>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Sign Up', new_user_path %>
+        <%= link_to 'Sign In', login_path  %>
+        <%= link_to 'Restaurants', restaurants_path %>
+        <%= link_to 'Cuisines', cuisines_path %>
+        <%= link_to 'Location', suburbs_path %>
         <% end %>
     </nav>
-    <%= yield %>
+    <div class="container">
+      <div class="fill">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,20 +1,21 @@
 <h1><%= @restaurant.name %></h1>
 
-<%= link_to image_tag(@restaurant.image, :alt => @restaurant.name, :class => 'feature'), @restaurant.image %>
-
-<ul>
-  <li><%= @restaurant.name %></li>
+<div class="gallery">
+<%= image_tag(@restaurant.image, :alt => @restaurant.name, :class => 'img-fluid show-restaurant img-thumbnail') %>
+</div>
+<div class="description">
   <% if @restaurant.cuisine.present? %>
-    <li><%= link_to @restaurant.cuisine.name, @restaurant.cuisine %></li>
+  Cuisine: <%= link_to @restaurant.cuisine.name, @restaurant.cuisine %>
+  <% end %><br>
+  Location: <% if @restaurant.suburb.present? %>
+  <%= link_to @restaurant.suburb.name, @restaurant.suburb %>
+  <% end %><br>
+  <% if @restaurant.price.present? %>
+  Price: <%= @restaurant.price %>
   <% end %>
-  <% if @restaurant.suburb.present? %>
-    <li><%= link_to @restaurant.suburb.name, @restaurant.suburb %></li>
-  <% end %>
-  <li><%= @restaurant.price %></li>
-
-</ul>
+</div>
 
 <div class="controls">
-  <%= link_to 'Edit restaurant', edit_restaurant_path(@restaurant) %>
-  <%= link_to 'Delete restaurant', @restaurant, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+  <%= link_to 'Delete', @restaurant, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 </div>

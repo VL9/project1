@@ -1,0 +1,17 @@
+<h1><%= @suburb.name %></h1>
+
+<% unless @suburb.restaurants.empty? %>
+  <h2>Restaurants</h2>
+<div class="gallery">
+  <% @suburb.restaurants.each do |restaurant| %>
+    <%= link_to image_tag(restaurant.image, :alt => restaurant.name, :class => 'img-thumbnail restaurant-thumbnail'), restaurant, :name => restaurant.name %>
+  <% end %>
+  </div>
+<% end %>
+
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit', edit_suburb_path(@suburb) %>
+  <%= link_to 'Delete', @suburb, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

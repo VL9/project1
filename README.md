@@ -1,24 +1,29 @@
-# README
+# RestaurantDatabase
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Check out the database and add to it! [live version](https://enigmatic-sea-63242.herokuapp.com/).
 
-Things you may want to cover:
+![Restaurant Screenshot](https://github.com/VL9/project1/tree/master/app/assets/images/screenshot.png)
+<br/>
 
-* Ruby version
+## Features
+* Register as a user
+* Search for restaurants through cuisines or locations
 
-* System dependencies
+## Possible Improvements
+* Favourites for users
+* User permissions
+* Commenting
+* Star rating
+* Location linked to Google Maps
 
-* Configuration
+## Acknowledgements
 
-* Database creation
+Thanks to my buddies and instructors for all their help. This website would be quite plain and incomplete without them.
 
-* Database initialization
+## Technologies
 
-* How to run the test suite
+Built using Ruby on Rails.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Licence
 
-* Deployment instructions
-
-* ...
+Licensed under MIT.
