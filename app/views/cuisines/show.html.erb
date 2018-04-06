@@ -7,7 +7,12 @@
   <h2>Restaurants</h2>
   <div class="gallery">
   <% @cuisine.restaurants.each do |restaurant| %>
+    <div class="wrapper">
     <%= link_to image_tag(restaurant.image, :alt => restaurant.name, :class => 'img-thumbnail restaurant-thumbnail'), restaurant, :name => restaurant.name %>
+    <div class="text">
+      <p><%= restaurant.name %></p>
+    </div>
+  </div>
   <% end %>
   </div>
 <% end %>
